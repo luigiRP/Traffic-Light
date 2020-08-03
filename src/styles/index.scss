@@ -1,13 +1,38 @@
 @import "~bootstrap/scss/bootstrap.scss";
 
-/* 
+.trafficStick {
+    margin: 0 auto;
+    background-color: black;
+    width: 3rem;
+    height: 10rem;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+.trafficWhole {
+    margin: 0 auto;
+    background-color: black;
+    width: 15rem;
+    height: 30rem;
+}
 
-*/
+.light {
+    margin: 0 auto;
+    border-radius: 50%;
+    width:7rem;
+    height: 7rem;
+    
+}
+.red {
+    background-color:red;
+}
+.yellow {
+    background-color:yellow;
+}
+
+.green {
+    background-color:green;
+}
+
+.active {
+    border: 3px solid white;
+}
+
