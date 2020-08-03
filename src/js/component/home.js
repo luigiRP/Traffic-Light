@@ -1,99 +1,94 @@
 import React, { useState, useEffect } from "react";
+import TrafficLight from "./trafficLight.js";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
-
-//create your first component
 export function Home() {
-	const [color, setColor] = useState("");
+	const colorRed = "red";
+	const colorYellow = "yellow";
+	const colorGreen = "green";
 
-	switch (color) {
-		case "red":
-			// code block
+	const [glowColor, setColor] = useState("");
+
+	switch (glowColor) {
+		case "activered":
 			return (
 				<div>
 					<div className="trafficStick" />
 					<div className="trafficWhole d-flex flex-column justify-content-around">
-						<div
-							className="light my-1 red activered"
-							onClick={() => setColor("red")}
-						/>
-						<div
-							className="light my-1 yellow"
-							onClick={() => setColor("yellow")}
-						/>
-						<div
-							className="light my-1 green"
-							onClick={() => setColor("green")}
-						/>
+						<div onClick={() => setColor("activered")}>
+							<TrafficLight
+								color={colorRed}
+								colorGlow={glowColor}
+							/>
+						</div>
+						<div onClick={() => setColor("activeyellow")}>
+							<TrafficLight color={colorYellow} colorGlow={""} />
+						</div>
+						<div onClick={() => setColor("activegreen")}>
+							<TrafficLight color={colorGreen} colorGlow={""} />
+						</div>
 					</div>
 				</div>
 			);
 			break;
-		case "yellow":
-			// code block
+		case "activeyellow":
 			return (
 				<div>
 					<div className="trafficStick" />
 					<div className="trafficWhole d-flex flex-column justify-content-around">
-						<div
-							className="light my-1 red "
-							onClick={() => setColor("red")}
-						/>
-						<div
-							className="light my-1 yellow activeyellow"
-							onClick={() => setColor("yellow")}
-						/>
-						<div
-							className="light my-1 green"
-							onClick={() => setColor("green")}
-						/>
-					</div>
-				</div>
-			);
-			break;
-		case "green":
-			return (
-				<div>
-					<div className="trafficStick" />
-					<div className="trafficWhole d-flex flex-column justify-content-around">
-						<div
-							className="light my-1 red "
-							onClick={() => setColor("red")}
-						/>
-						<div
-							className="light my-1 yellow "
-							onClick={() => setColor("yellow")}
-						/>
-						<div
-							className="light my-1 green activegreen"
-							onClick={() => setColor("green")}
-						/>
+						<div onClick={() => setColor("activered")}>
+							<TrafficLight color={colorRed} colorGlow={""} />
+						</div>
+						<div onClick={() => setColor("activeyellow")}>
+							<TrafficLight
+								color={colorYellow}
+								colorGlow={glowColor}
+							/>
+						</div>
+						<div onClick={() => setColor("activegreen")}>
+							<TrafficLight color={colorGreen} colorGlow={""} />
+						</div>
 					</div>
 				</div>
 			);
 			break;
 
+		case "activegreen":
+			return (
+				<div>
+					<div className="trafficStick" />
+					<div className="trafficWhole d-flex flex-column justify-content-around">
+						<div onClick={() => setColor("activered")}>
+							<TrafficLight color={colorRed} colorGlow={""} />
+						</div>
+						<div onClick={() => setColor("activeyellow")}>
+							<TrafficLight color={colorYellow} colorGlow={""} />
+						</div>
+						<div onClick={() => setColor("activegreen")}>
+							<TrafficLight
+								color={colorGreen}
+								colorGlow={glowColor}
+							/>
+						</div>
+					</div>
+				</div>
+			);
+			break;
 		default:
 			return (
 				<div>
 					<div className="trafficStick" />
 					<div className="trafficWhole d-flex flex-column justify-content-around">
-						<div
-							className="light my-1 red "
-							onClick={() => setColor("red")}
-						/>
-						<div
-							className="light my-1 yellow "
-							onClick={() => setColor("yellow")}
-						/>
-						<div
-							className="light my-1 green "
-							onClick={() => setColor("green")}
-						/>
+						<div onClick={() => setColor("activered")}>
+							<TrafficLight color={colorRed} colorGlow={""} />
+						</div>
+						<div onClick={() => setColor("activeyellow")}>
+							<TrafficLight color={colorYellow} colorGlow={""} />
+						</div>
+						<div onClick={() => setColor("activegreen")}>
+							<TrafficLight color={colorGreen} colorGlow={""} />
+						</div>
 					</div>
 				</div>
 			);
-		// code block
 	}
 }
