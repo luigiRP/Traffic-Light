@@ -32,7 +32,23 @@
     background-color:green;
 }
 
-.active {
-    border: 3px solid white;
+.activered {
+    box-shadow:
+        0 0 60px 10px red,  /* inner white */
+        0 0 100px 20px #fff, /* middle magenta */
+        0 0 140px 40px rgb(196, 132, 13); /* outer cyan */;
+}
+
+.activeyellow {
+    box-shadow:
+        0 0 60px 10px yellow,  /* inner white */
+        0 0 100px 20px #fff, /* middle magenta */
+        0 0 140px 40px rgb(204, 228, 98); /* outer cyan */
+}
+.activegreen {
+     box-shadow:
+        0 0 60px 10px green,  /* inner white */
+        0 0 100px 20px #fff, /* middle magenta */
+        0 0 140px 40px rgb(110, 192, 110) /* outer cyan */
 }
 

@@ -15,7 +15,7 @@ export function Home() {
 					<div className="trafficStick" />
 					<div className="trafficWhole d-flex flex-column justify-content-around">
 						<div
-							className="light my-1 red active"
+							className="light my-1 red activered"
 							onClick={() => setColor("red")}
 						/>
 						<div
@@ -41,7 +41,7 @@ export function Home() {
 							onClick={() => setColor("red")}
 						/>
 						<div
-							className="light my-1 yellow active"
+							className="light my-1 yellow activeyellow"
 							onClick={() => setColor("yellow")}
 						/>
 						<div
@@ -66,7 +66,7 @@ export function Home() {
 							onClick={() => setColor("yellow")}
 						/>
 						<div
-							className="light my-1 green active"
+							className="light my-1 green activegreen"
 							onClick={() => setColor("green")}
 						/>
 					</div>
